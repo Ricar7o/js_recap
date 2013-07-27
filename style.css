@@ -1,0 +1,147 @@
+/*This reset makes it so all the default CSS values are gone, and we can control everything. It's not always necessary, but doesnt hurt.*/
+*{
+margin: 0;
+padding: 0; /* to reset all, and there by you may remove all other margin:0; and padding:0; rules from other parts of your CSS files */
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background-color: #eee;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none; /*The underline for links looks very old school now, so this gets rid of it.*/
+  color: black;
+  display: inline-block;
+}
+
+p {
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+#top {
+  display: inline-block;
+  margin-left: 45px;
+  /*width: 500px;*/
+}
+
+#email, #pass {
+  width: 200px;
+}
+
+#top p {
+  font-size: 0.7em;
+  color: red;
+  padding: 3px;
+}
+
+#closebtn {
+  float: right;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto; /*This centers everything instead of aligning all the content to the left. */
+  width: 80%; /*Using the percentage here keeps things fluid, and slightly responsive. */
+  min-width: 1280px; /*This makes it so that the content doesn't get all squished when the window size is too small. This makes it NOT responsive. */
+  padding-top: 30px;
+}
+
+.card { /*We seperated out the card class because it's repeated in our nav, body, and right-sidebar. Also, anytime we want to turn something into a card, we can just slap the "card" class onto it now*/
+  margin-left: 10px;
+  box-shadow: 0px 1px 5px grey; /*Box shadows! They're awesome, and modern. Google did this to almost all of their stuff. */
+  border-radius: 4px; /*Makes the corners of the box rounded. Makes things feel warm and fuzzy instead of sharp.*/
+  margin-top: 5px;
+  float: left;
+  background-color: white;
+}
+
+cmd+/
+
+/*--------------------------- before nav ----------------------------*/
+
+img.github-ribbon {
+
+  border: 0;
+  left: 0;
+  position: fixed; /* Try `position: fixed;` and `position: absolute;` */
+  top: 0;
+
+  /*
+    Set up the hover effect here.
+    The `opacity` property sets the ribbon to 60% transparent,
+    and the `transition` property says handle any changes to
+    the `opacity` property with a 0.3-second transition.
+  */
+  opacity: 0.6;
+  transition: opacity 0.3s linear;
+}
+
+img.github-ribbon:hover {
+  /*
+    When we hover over the ribbon, switch to full opacity.
+    This will transition because of the transition property above.
+  */
+  opacity: 1;
+}
+
+/*------------- Styles for the nav bar on the left ---------------*/
+
+img.profilepic {
+  padding: 10px;
+}
+
+.nav {
+  width: 13%;
+  text-align: center;
+  float: left;
+}
+
+.nav-item{
+  background-color: white;
+  height: 30px;
+  padding: 10px;
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  -ms-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+.nav-item:hover{ /*Whenever you do :hover after something, it only applies the style if you're hovering over it.*/
+  background-color: #EDEDED;
+}
+
+#bottom-nav-item { /*This changes the styles for the bottom most nav-item. Take this out and see the subtle annoying style for the bottom of the nav bar.*/
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+/*------------- Styles for the main content ---------------*/
+
+.main {
+  width: 60%;
+  margin-right: 10px;
+}
+
+h1 {
+  padding: .6em;
+}
+
+/*------------- Styles for the right sidebar ---------------*/
+
+
+.right-sidebar{
+  width: 17%;
+  float: left;
+}
+
+/*-------------- Styles for the footer ---------------*/
+
+footer {
+  clear: both;
+  width: 100%;
+}
